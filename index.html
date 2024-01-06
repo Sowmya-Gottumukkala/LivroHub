@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+  <title>Livro Hub</title>
+  <link rel="stylesheet" href="styles1.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="livrohub logo.jpg" alt="logo">
+    </div> 
+	 <h1 class="page-title">Livro Hub</h1> 
+    <nav>
+      <ul>
+        <li><a href="#find-book">Find-Book</a></li>
+		<li><a href="#find-book">Departments</a></li>
+        <li><a href="#book-request">Book request</a></li>
+		<li><a href="#about-us">About Us</a></li>
+		<li><a href="#contact-us">Contact Us</a></li>
+		<li><a href="#feedback">Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="find-book">
+    <div class="search-container">
+      <form id="searchForm">
+        <input type="text" id="searchInput" placeholder="Search for a book...">
+        <button align="right" type="submit">Search</button>
+      </form>
+    </div>
+  </section>
+   <section id="catalog">
+   
+   </section>
+   <section id="Departments">
+      <section class="section section--dark">
+        <div class="scrollable-with-title scrollable-with-title--in-page-section">
+            <div class="scrollable-with-title__title">
+                <h1 class="heading heading--h3 heading--no-margin heading--inline">
+                   Available Departments
+                </h1>
+            </div>
+            
+            <div class="scrollable-with-title__scrollable">
+                <div data-scrollable="homepage-departments">
+                    <div data-scrollable-inner="">
+                        <div class="scrollable-items">
+                            <!-- CSE Department -->
+                            <div class="scrollable-items__item">
+                                <div class="department-tile">
+                                    <div class="department-tile__image">
+									   <a href="cse.html" class="curved-image-link">
+                                        <img src="https://www.ines.ac.rw/media/django-summernote/2022-04-12/43a659ff-23d0-4bfc-9ca8-2bad936990b2.jpg" alt="cse">
+                                    </div>
+                                    <div class="department-label">CSE</div>
+                                </div>
+                            </div>
+						  </a>
+                            <!-- Repeat the same structure for other departments -->
+							
+                            <!-- ECE Department -->
+                            <div class="scrollable-items__item">
+                                <div class="department-tile">
+                                    <div class="department-tile__image">
+									   <a href="ece.html" class="curved-image-link">
+                                        <img src="https://www.cepathanapuram.ac.in/assets/images/ece1.jpg" alt="ECE">
+                                    </div>
+                                    <div class="department-label">ECE</div>
+                                </div>
+                            </div>
+                            </a>
+                            <!-- EEE Department -->
+                            <div class="scrollable-items__item">
+                                <div class="department-tile">
+                                    <div class="department-tile__image">
+									<a href="eee.html" class="curved-image-link">
+                                        <img src="https://img.freepik.com/free-photo/man-electrical-technician-working-switchboard-with-fuses_169016-24410.jpg" alt="EEE">
+                                    </div>
+                                    <div class="department-label">EEE</div>
+                                </div>
+                            </div>
+                            </a>
+                            <!-- Mech Department -->
+                            <div class="scrollable-items__item">
+                                <div class="department-tile">
+                                    <div class="department-tile__image">
+									<a href="mech.html" class="curved-image-link">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWPGiffxUP1iBoNFBilpQYJfUEndYw0GcjgQ&usqp=CAU" alt="MECH">
+                                    </div>
+                                    <div class="department-label">MECH</div>
+                                </div>
+                            </div>
+                            </a>
+                            <!-- Civil Department -->
+                            <div class="scrollable-items__item">
+                                <div class="department-tile">
+                                    <div class="department-tile__image">
+									 <a href="civil.html" class="curved-image-link">
+                                        <img src="https://thumbs.dreamstime.com/b/safety-helmet-architect-pland-wood-table-sunset-scen-file-scene-building-construction-33574911.jpg" alt="CIVIL">
+                                    </div>
+                                    <div class="department-label">CIVIL</div>
+                                </div>
+                            </div>
+			</a>
+				 <!-- Other Department -->
+                            <div class="scrollable-items__item">
+                                <div class="department-tile">
+                                    <div class="department-tile__image">
+					<a href="other.html" class="curved-image-link">
+                                        <img src="https://i1.sndcdn.com/avatars-000330114611-hkocch-t500x500.jpg" alt="MECH">
+                                    </div>
+                                    <div class="department-label">Other Books</div>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	</section>
+	
+	
+
+   <section id="book-request">
+    <div class="request-container">
+    <h2>Request a Book</h2>
+    <form id="requestForm" action="mailto:livrohub2023@gmail.com" method="post" enctype="text/plain">
+	   <label for="Name">Name:</label>
+      <input type="text" id="Name" name="Name" required>
+	  
+	   <label for="E-mail">E-mail:</label>
+      <input type="text" id="E_mail" name="E_mail" required>
+	 
+      <label for="bookTitle">Book Title:</label>
+      <input type="text" id="bookTitle" name="bookTitle" required>
+
+      <label for="author">Author:</label>
+      <input type="text" id="author" name="author" required>
+
+      <label for="additionalInfo">Additional Information:</label>
+      <textarea id="additionalInfo" name="additionalInfo" rows="4"></textarea>
+
+      <button type="submit">Submit Request</button>
+    </form>
+  </div>
+   </section>
+    
+   <section id="about-us">
+   <div class="about-us-container show">
+    <div class="about-us-text">
+	<h1> About Us </h1>
+	    <p> "Livro Hub is your gateway to a world of knowledge and learning. We're a passionate team dedicated to providing comprehensive resources for engineering subjects and competitive exam preparation. Our mission is to make learning easy and accessible, empowering both students and educators to excel in their studies and exams. Join us on a journey of knowledge and growth, where education meets innovation."
+		</p>
+	</div>
+	 <div class="about-us-image">
+      <img src="livrohub logo.jpg" alt="About Us Image">
+    </div>
+	</div>
+   </section>
+
+   <section id="contact-us">
+       <div class="contact-container">
+       <h2>Contact Us</h2>
+       <p>If you have any questions or inquiries, feel free to get in touch with us!</p>
+       <a href="mailto:livrohub2023@gmail.com" class="contact-button">Contact Now</a>
+       </div>
+   </section>
+   <section id="feedback">
+    <div class="feedback-container">
+      <h2>Feedback</h2>
+      <div class="rating">
+        <i class="far fa-smile feedback-icon" data-rating="happy"></i>
+        <i class="far fa-meh feedback-icon" data-rating="neutral"></i>
+        <i class="far fa-frown feedback-icon" data-rating="sad"></i>
+      </div>
+      <p class="feedback-text"> Thank you for your feedback!</p>
+    </div>
+  </section>
+
+   <footer>
+   <div class="footer-container">
+    <div class="about-team">
+      <h2>Take a glance at our team:
+	  <a href="team.html">Our Team</a></h2>
+    </div>
+    <div class="contact-info">
+      <h2>Contact Us</h2>
+      <p><a href="mailto:contact@livrohub.com">contact@livrohub.com</a></p>
+    </div>
+    <div class="quick-links">
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="#find-book">Find Book</a></li>
+        <li><a href="#book-request">Book Request</a></li>
+        <li><a href="#about-us">About Us</a></li>
+        <li><a href="#contact-us">Contact Us</a></li>
+        <li><a href="#feedback">Feedback</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+  
+  
+  
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,775 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lobster', cursive;
+    background: url(https://www.transparenttextures.com/patterns/wood-pattern.png);
+    margin: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #EE3E38;
+    color: #fff;
+}
+/* Page title style */
+
+.page-title {
+    font-size: 60px;
+    /* Adjust the font size as needed */
+    color: #fff;
+    /* Text color */
+    font-family: 'Lobster', cursive;
+    /* Font family */
+    margin-left: 20px;
+    /* Add spacing from the logo */
+    animation: scale 6s alternate infinite;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+        /* Start with normal scale (1x) */
+    }
+
+    100% {
+        transform: scale(1.1);
+        /* Scale up to 1.1x and back (alternate) */
+    }
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #EE3E38;
+}
+
+#find-book {
+    padding: 40px;
+}
+/* Add this to your existing CSS code */
+/* Enlarged logo image */
+
+.enlarged {
+    transform: scale(1.2);
+    /* Increase the size (you can adjust the scale factor) */
+    transition: transform 0.3s;
+    /* Add a smooth transition */
+    z-index: 1;
+    /* Ensure the logo appears on top of other content */
+    cursor: pointer;
+    /* Change the cursor to indicate clickability */
+}
+
+/* styles.css */
+.search-container {
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+input[type="text"] {
+    flex: 1;
+    border: none;
+    padding: 8px;
+    font-size: 16px;
+    outline: none;
+    background-color: transparent;
+}
+
+input[type="text"]::placeholder {
+    color: #aaa;
+}
+
+button {
+    background-color: #EE3E38;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #EE3E38;
+}
+/* Styles for the book request section */
+/* Styles for the book request section */
+
+#book-request {
+    padding: 40px;
+}
+
+.request-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.request-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Styles for form elements */
+form {
+    display: grid;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    font-color: #EE3E38;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #EE3E38;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #C0392B;
+}
+
+/* Add responsive styles if needed */
+@media screen and (max-width: 768px) {
+    .request-container {
+        padding: 10px;
+    }
+}
+
+/* Animation for the About Us section */
+.about-us-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.about-us-container.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-us-text {
+    flex: 1;
+    font-family: 'Indie Flower', cursive;
+    /* Add a stylish font */
+    font-size: 18px;
+    /* Adjust font size as needed */
+    line-height: 1.5;
+}
+
+.about-us-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.about-us-image img {
+    max-width: 280px;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles for the Contact Us section */
+#contact-us {
+    padding: 60px 0;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.contact-container h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.contact-container p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #EE3E38;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #C0392B;
+}
+/* Styles for the Feedback section */
+
+#feedback {
+    padding: 60px 0;
+}
+
+.feedback-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.feedback-container h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.rating {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.feedback-icon {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    margin: 0 15px;
+}
+
+.feedback-icon:hover {
+    transform: scale(1.2);
+}
+
+.feedback-text {
+    font-size: 18px;
+    color: #666;
+}
+/* Styles for the Footer */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+}
+
+.footer-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.about-team, .contact-info, .quick-links {
+    flex-basis: calc(33.33% - 20px);
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+/* ... (Your existing styles) ... */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+    background-color: white;
+    color: #013243;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #BAC1BA;
+    transform-origin: bottom;
+    transform: skewX(-45deg);
+}
+
+.card:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -5px;
+    width: 5px;
+    height: 100%;
+    background: #92A29C;
+    transform-origin: left;
+    transform: skewY(-45deg);
+}
+
+.card .imgBox {
+    width: 100%;
+    height: 60%;
+    position: relative;
+    overflow: hidden;
+}
+
+.card .bark {
+    position: absolute;
+    background: #e0e1dc;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.7s;
+    box-shadow: 300px 200px 100px rgba(0, 0, 0, 0.4) inset;
+}
+
+.card .imgBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.card:hover .imgBox img {
+    transform: scale(1.1);
+}
+
+.card:hover .bark {
+    opacity: 1;
+    transition: 0.6s;
+}
+
+.card .details {
+    flex-grow: 1;
+    /* Allow the details section to grow vertically */
+    padding: 15px;
+}
+
+/* ... (Your existing styles) ... */
+*, * :before, * :after {
+    box-sizing: inherit;
+}
+
+.column {
+    float: left;
+    width: 100%;
+    margin-bottom: 25px;
+    padding: 0 8px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+}
+
+.title {
+    color: black;
+}
+
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+}
+
+/* Logo styles */
+.logo {
+    width: 100px;
+    height: 100px;
+    background-color: #EE3E38;
+    border-radius: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 80%;
+}
+
+/* Additional styling for main heading */
+.title h1 {
+    font-size: 50px;
+    margin-left: 10px;
+    color: #fff;
+    font-family: 'Lobster', cursive;
+}
+
+.book-card {
+    width: 200px;
+    height: 300px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.book-card img {
+    width: 150px;
+    /* Adjust the width as needed */
+    height: 200px;
+    /* Adjust the height as needed */
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.book-card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.book-card p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.book-card a {
+    background-color: #EE3E38;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.book-card a:hover {
+    background-color: #f7f6f6;
+    /* Change the hover color as needed */
+}
+
+footer {
+    background-color: #EE3E38;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.about-team {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.about-team p {
+    font-size: 16px;
+}
+/* Reset some default styles for better consistency */
+/* Reset default styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #EE3E38;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+/* Apply the rest of your styles here */
+
+/* ... Your existing styles ... */
+.team-member {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    padding: 20px;
+}
+
+.team-member h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.contact-info p {
+    margin-top: 10px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.about-team, .contact-info, .quick-links {
+    flex-basis: calc(33.33% - 20px);
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+/* ... (Your existing styles) ... */
+
+/* Hover effect for navigation links */
+nav a:hover {
+    color: #f9f7f7;
+    font-weight: bold;
+    /* Add bold font weight on hover */
+}
+/* Add this to your CSS file (styles1.css) */
+
+.linkedin-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0077B5;
+    /* LinkedIn blue */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.linkedin-button:hover {
+    background-color: #005EAB;
+    /* Darker LinkedIn blue on hover */
+}
+
+/* Add spacing between book cards */
+#catalog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.book-card {
+    /* Your existing styles */
+    margin: 10px 0;
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Smoother transition */
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    /* Slight upward lift on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    /* Slightly stronger shadow */
+}
+
+/* ... (Your existing styles) ... */
+.section {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.scrollable-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+h1 {
+    font-size: 50px;
+    margin-left: 10px;
+    color: #EE3E38;
+    /* You can customize the color as needed */
+    font-family: 'Lobster', cursive;
+}
+
+.department-tile {
+    width: 200px;
+    border-radius: 15px;
+    /* Rounded corners */
+    overflow: hidden;
+    /* Hide overflow to respect rounded corners */
+    margin: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    /* Add a subtle shadow */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.department-tile__image img {
+    width: 100%;
+    height: 150px;
+    border-radius: 15px 15px 0 0;
+    /* Only top corners are rounded */
+}
+
+.department-label {
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #EE3E38;
+    color: white;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 600px)
+{
+    height: 1px;
+    {
+        font-size: 30px;
+    }
+}
