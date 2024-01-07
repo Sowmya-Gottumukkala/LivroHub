@@ -699,21 +699,62 @@ nav a:hover {
     justify-content: space-between;
 }
 
+
+
+/* Book listing */
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
 .book-card {
-    /* Your existing styles */
-    margin: 10px 0;
-    transition: transform 0.3s, box-shadow 0.3s;
-    /* Smoother transition */
+  width: 200px;
+  /* Remove fixed height */
+   height: 400px; 
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
-.book-card:hover {
-    transform: translateY(-5px);
-    /* Slight upward lift on hover */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    /* Slightly stronger shadow */
+.book-card img {
+  width: 150px; /* Adjust the width as needed */
+  height: 200px; /* Adjust the height as needed */
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
-/* ... (Your existing styles) ... */
+.book-card h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.book-card p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.book-card a {
+  margin-top: auto; /* Push the button to the bottom of the card */
+  background-color: #EE3E38;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.book-card a:hover {
+  background-color: #C0392B; /* Change the hover color as needed */
+}
 .section {
     text-align: center;
     padding: 40px 0;
