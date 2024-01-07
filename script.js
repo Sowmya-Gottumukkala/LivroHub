@@ -189,3 +189,39 @@ prevButton.addEventListener('click', () => {
     displayResults(prevPageBooks);
   }
 });
+
+
+const searchForm = document.getElementById('searchForm');
+searchForm.addEventListener('submit', handleSearch);
+
+const feedbackIcons = document.querySelectorAll('.feedback-icon');
+feedbackIcons.forEach(icon => {
+  icon.addEventListener('click', () => {
+    const rating = icon.getAttribute('data-rating');
+    handleFeedback(rating);
+
+    feedbackIcons.forEach(otherIcon => otherIcon.classList.remove('selected'));
+    icon.classList.add('selected');
+  });
+});
+
+function handleFeedback(rating) {
+  const feedbackText = document.querySelector('.feedback-text');
+  const contactMessage = " Please contact us and give your feedback!";
+
+  switch (rating) {
+    case 'happy':
+      feedbackText.textContent = `Thank You for your happy feedback. It makes us feel better and happy to give a good experience.${contactMessage}`;
+      break;
+    case 'neutral':
+      feedbackText.textContent = `Thanks for the average feedback. We will surely try to give a good experience.${contactMessage}`;
+      break;
+    case 'sad':
+      feedbackText.textContent = `Thank You for the sad feedback. We are so sorry for the inconvenience. We make sure that your next visit makes you happy.${contactMessage}`;
+      break;
+    default:
+      break;
+  }
+}			   
+			   
+			
