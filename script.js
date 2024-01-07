@@ -1,3 +1,6 @@
+
+
+
 const books = [
 //s and h
 { title: "NMOD", author: "B S Grewal", cover: "https://www.booksb2bportal.com/covers/31/9781683921288_L.jpg", link: "https://drive.google.com/file/d/1827srEtOR1ciLqdSLTGqUnn4AM2gYcOY/view?usp=sharing"},
@@ -107,7 +110,8 @@ const books = [
   
 ];
 
-const booksPerPage = 80; // Adjust the number of books per page as needed
+
+const booksPerPage = 100;
 let currentPage = 1;
 
 function displayResults(results) {
@@ -120,39 +124,55 @@ function displayResults(results) {
     catalogSection.appendChild(noResultsMessage);
   } else {
     results.forEach(book => {
-      const bookCard = document.createElement('div');
-      bookCard.classList.add('book-card');
-
-      const coverImage = document.createElement('img');
-      coverImage.src = book.cover;
-      coverImage.classList.add('book-cover');
-      bookCard.appendChild(coverImage);
-
-      const titleElement = document.createElement('h3');
-      titleElement.textContent = book.title;
-      titleElement.classList.add('book-title');
-      bookCard.appendChild(titleElement);
-
-      const authorElement = document.createElement('p');
-      authorElement.textContent = `Author: ${book.author}`;
-      authorElement.classList.add('book-author');
-      bookCard.appendChild(authorElement);
-
-      const bookLink = document.createElement('a');
-      bookLink.href = book.link;
-      bookLink.textContent = 'View Book';
-      bookCard.appendChild(bookLink);
-
+      const bookCard = createBookCard(book);
       catalogSection.appendChild(bookCard);
     });
   }
+}
+
+function createBookCard(book) {
+  const card = document.createElement('div');
+  card.classList.add('book-card');
+
+  const coverImage = document.createElement('img');
+  coverImage.src = book.cover;
+  coverImage.alt = `${book.title} cover`;
+
+  const title = document.createElement('h3');
+  title.textContent = book.title;
+
+  const author = document.createElement('p');
+  author.textContent = `Author: ${book.author}`;
+
+  const link = document.createElement('a');
+  link.href = book.link;
+  link.textContent = 'Read Book';
+
+  card.appendChild(coverImage);
+  card.appendChild(title);
+  card.appendChild(author);
+  card.appendChild(link);
+
+  return card;
 }
 
 function handleSearch(event) {
   event.preventDefault();
 
   const searchInput = document.getElementById('searchInput');
-  const searchTerm = searchInput.value.toLowerCase();
+  const searchTerm = searchInput.value.trim().toLowerCase();
+
+  if (searchTerm === '') {
+    // If search term is empty, display a message
+    const catalogSection = document.getElementById('catalog');
+    catalogSection.innerHTML = '';
+
+    const noSearchTermMessage = document.createElement('p');
+    noSearchTermMessage.textContent = 'Please enter a search term.';
+    catalogSection.appendChild(noSearchTermMessage);
+
+    return;
+  }
 
   const results = books.filter(book => {
     return book.title.toLowerCase().includes(searchTerm) || book.author.toLowerCase().includes(searchTerm);
@@ -161,9 +181,40 @@ function handleSearch(event) {
   displayResults(results);
 }
 
+// Initial display of books
+displayResults(books.slice(0, booksPerPage));
+
+// Event listener for the search form
 const searchForm = document.getElementById('searchForm');
 searchForm.addEventListener('submit', handleSearch);
 
+// Pagination controls
+const nextButton = document.getElementById('nextButton');
+const prevButton = document.getElementById('prevButton');
+
+nextButton.addEventListener('click', () => {
+  const totalPages = Math.ceil(books.length / booksPerPage);
+
+  if (currentPage < totalPages) {
+    currentPage++;
+  }
+
+  const startIndex = (currentPage - 1) * booksPerPage;
+  const endIndex = startIndex + booksPerPage;
+  const nextPageBooks = books.slice(startIndex, endIndex);
+  displayResults(nextPageBooks);
+});
+
+prevButton.addEventListener('click', () => {
+  if (currentPage > 1) {
+    currentPage--;
+  }
+
+  const startIndex = (currentPage - 1) * booksPerPage;
+  const endIndex = startIndex + booksPerPage;
+  const prevPageBooks = books.slice(startIndex, endIndex);
+  displayResults(prevPageBooks);
+});
 const feedbackIcons = document.querySelectorAll('.feedback-icon');
 feedbackIcons.forEach(icon => {
   icon.addEventListener('click', () => {
