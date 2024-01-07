@@ -161,36 +161,6 @@ function handleSearch(event) {
   displayResults(results);
 }
 
-// Initial display of books
-displayResults(books.slice(0, booksPerPage));
-
-// Event listener for the search form
-const searchForm = document.getElementById('searchForm');
-searchForm.addEventListener('submit', handleSearch);
-
-// Pagination controls
-const nextButton = document.getElementById('nextButton');
-const prevButton = document.getElementById('prevButton');
-
-nextButton.addEventListener('click', () => {
-  const startIndex = currentPage * booksPerPage;
-  const endIndex = startIndex + booksPerPage;
-  const nextPageBooks = books.slice(startIndex, endIndex);
-  displayResults(nextPageBooks);
-  currentPage++;
-});
-
-prevButton.addEventListener('click', () => {
-  if (currentPage > 1) {
-    currentPage--;
-    const startIndex = (currentPage - 1) * booksPerPage;
-    const endIndex = startIndex + booksPerPage;
-    const prevPageBooks = books.slice(startIndex, endIndex);
-    displayResults(prevPageBooks);
-  }
-});
-
-
 const searchForm = document.getElementById('searchForm');
 searchForm.addEventListener('submit', handleSearch);
 
@@ -222,6 +192,4 @@ function handleFeedback(rating) {
     default:
       break;
   }
-}			   
-			   
-			
+}	
