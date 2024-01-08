@@ -72,7 +72,7 @@ const books = [
     link: "https://drive.google.com/file/d/1x280svgDQ_I5QDJgrvJZ_ZAxKnDmtEUI/view?usp=sharing"
   },
   {
-    title: "Domestic Microgeneration renewable and Distributed Energy Technologies Policies and Economics",
+    title: "Domestic Microgeneration renewable and Distributed Energy",
     author: "Unknown",
     cover: "https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/9124oWhUFdL._AC_UF1000,1000_QL80_.jpg",
     link: "https://drive.google.com/file/d/1GE8eAXEXaWry0S3Sbcyv3ERsVkd_nxGw/view?usp=sharing"
