@@ -518,9 +518,9 @@ html {
 }
 
 .book-card img {
-    width: 150px;
+    width: 250px;
     /* Adjust the width as needed */
-    height: 200px;
+    height: 300px;
     /* Adjust the height as needed */
     object-fit: cover;
     border-radius: 5px;
