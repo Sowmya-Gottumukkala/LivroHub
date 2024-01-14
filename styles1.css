@@ -31,7 +31,6 @@ header {
     /* Add spacing from the logo */
     animation: scale 6s alternate infinite;
 }
-
 @keyframes scale {
     0% {
         transform: scale(1);
