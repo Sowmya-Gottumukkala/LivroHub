@@ -39,6 +39,7 @@ const books = [
   { title: "Beginning-AngularJS", author: "Andrew Grant", cover: "https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/61XABRd-DiL._AC_UF1000,1000_QL80_.jpg", link: "https://drive.google.com/file/d/1BpzZYOOhxQ_7qbNfke5WZjZUS3XmyEly/view?usp=sharing" },
   { title: "Blockchain basic-1", author: "Daniel Drescher", cover: "https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/718bo4F0KPL._AC_UF1000,1000_QL80_.jpg", link: "https://drive.google.com/file/d/1caaDvaQ8aPMkofPJbi749GbIqN4Y6Na5/view?usp=sharing" },
   { title: "C Programming Language -1", author: "Dennis M.Ritchie & Brian W. Kernighan", cover: "https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/41vUdzcR8cL.jpg", link: "https://drive.google.com/file/d/1o9Eu3UbXEX3pBtY0TDQi68FtdypC97jr/view?usp=sharing" },
+  { title: "Clean Code-A Handbook of Agile Software Craftsmanship -1", author: "Unknown", cover: "https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/41SH-SvWPxL.jpg", link: "https://drive.google.com/file/d/1oTG9LD_TsP0YNcrforUdyPKK7H7q0SNG/view?usp=sharing" },
 
 //other
 { title: "NMOD", author: "B S Grewal", cover: "https://www.booksb2bportal.com/covers/31/9781683921288_L.jpg", link: "https://drive.google.com/file/d/1827srEtOR1ciLqdSLTGqUnn4AM2gYcOY/view?usp=sharing"},
