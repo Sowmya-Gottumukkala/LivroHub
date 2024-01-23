@@ -20,7 +20,7 @@ const books = [
   {
     title: "Linear Integrated Circuit",
     author: "D. Roy Choudhar",
-     cover: "https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/51HkEvtN-ML._AC_UF1000,1000_QL80_.jpg",
+     cover: "https://5.imimg.com/data5/SELLER/Default/2021/5/AS/VN/UU/59907886/whatsapp-image-2021-04-27-at-5-15-22-pm-500x500.jpeg",
    link: "https://drive.google.com/file/d/1AzC6Bwl55vFCaBW27dCYiFgXZaseZC9M/view?usp=sharing"
   },
   {
@@ -84,6 +84,7 @@ const books = [
     link: "https://drive.google.com/file/d/12c1XUj87TYm67oOLvy6uqQpmV2MqxyXR/view?usp=share_link"
   }
 ];
+
 // Function to display the search results
 function displayResults(results) {
   const catalogSection = document.getElementById('catalog');
